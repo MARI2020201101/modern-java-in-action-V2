@@ -1,4 +1,4 @@
-package stream;
+package algorithm01;
 
 class FactorialWithCombination {
     static int[] memo = new int[100];
