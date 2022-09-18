@@ -29,8 +29,6 @@ class MapCollector2 {
                 .collect(Collectors.partitioningBy(d -> d.isDrink));
 
         isVegiDish.forEach((key, value) -> System.out.println(key + " : " +value));
-
-
         System.out.println("----");
 
 
@@ -44,8 +42,6 @@ class MapCollector2 {
                         , Collectors.toSet()));
 
         caloriesTypeDish.forEach((key, value)->  System.out.println(key + " : " +value));
-
-
         System.out.println("----");
 
 
