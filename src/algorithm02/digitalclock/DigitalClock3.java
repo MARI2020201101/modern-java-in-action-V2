@@ -1,6 +1,6 @@
 package algorithm02.digitalclock;
 
-public class DigitalClock3 {
+class DigitalClock3 {
     static int[] clock = {6,2,5,5,4,5,6,3,7,6};
     static int[] memo = new int[60];
 
