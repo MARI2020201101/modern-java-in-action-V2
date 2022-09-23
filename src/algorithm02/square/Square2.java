@@ -10,7 +10,7 @@ class Square2 {
         int count = 0;
         for(int l = 1000; l > 0; l--){
             for(int s = l; s > 0 ; s--){
-                if(countSquare(l,s)==20) count++;
+                if(countSquare(l,s) == 20) count++;
             }
         }
         return count;
