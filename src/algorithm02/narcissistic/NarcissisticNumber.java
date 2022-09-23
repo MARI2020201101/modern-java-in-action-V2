@@ -5,6 +5,24 @@ public class NarcissisticNumber {
     public static void main(String[] args) {
         System.out.println(toEightDigit(22));
         System.out.println(toTenDigit("26"));
+
+        checkNarcissistic();
+    }
+
+    private static void checkNarcissistic() {
+        int count=0;
+        for(int i = 1; i < 8 ; i++){
+            for (int j = 0; j < 8; j++) {
+                int num = (int) (Math.pow(i,2) + Math.pow(j,2));
+
+                String eightDigit = toEightDigit(num);
+                if(eightDigit.equals(i+j+"")) {
+                    System.out.println(eightDigit);
+                    count++;
+                }
+            }
+        }
+        System.out.println(count);
     }
 
 
