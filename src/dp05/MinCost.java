@@ -11,7 +11,7 @@ class MinCost {
         System.out.println(solve(2,3));
     }
     static int solve(int p, int q){
-        System.out.println(String.format("p=%d , q=%d",p,q ));
+        System.out.println(String.format("p=%d , q=%d",p,q));
         if(p<=0 && q <=0) return cost[p][q];
         else if(p==0){
             return solve(p,q-1) + cost[p][q];

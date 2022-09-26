@@ -15,20 +15,22 @@ class MemoMinCost {
         for (int i = 0; i < memo.length; i++) {
             for (int j = 0; j < memo[0].length; j++) {
                 if(i==0 && j==0) memo[i][j]=cost[i][j];
-
+                else if(i==0) memo[i][j]+=cost[i][j-1] + cost[i][j];
+                else if(j==0) memo[i][j]+=cost[i-1][j] + cost[i][j];
                 else memo[i][j]=0;
             }
+        }
+        for (int i = 0; i < memo.length; i++) {
+            for (int j = 0; j < memo[0].length; j++) {
+                System.out.print(memo[i][j] + " ");
+            }
+            System.out.println();
         }
     }
     static int solve(int p, int q){
         if(memo[p][q]!=0) return memo[p][q];
-        else if(p==0){
-            return cost[p][q-1] + memo[p][q];
-        }
-        else if(q==0){
-            return cost[p-1][q] + memo[p][q];
-        }
-         memo[p][q]=Math.min(memo[p-1][q], memo[p][q-1]) + cost[p][q];
+
+         memo[p][q] = Math.min(solve(p-1,q), solve(p,q-1)) + cost[p][q];
          return memo[p][q];
     }
 }
