@@ -8,9 +8,9 @@ class MaxSubString3 {
     static int maxSubString(String str){
         int max = 0;
         for (int i = 0; i < str.length(); i++) {
-            for (int j = i+1; j < str.length(); j++) {
+            for (int j = i+1; j < str.length(); j+=2) {
                 int len = j-i+1;
-                System.out.println("len = "+len);
+                System.out.println(String.format("target : %s",str.substring(i,j+1)));
                 if(len <= max) continue;
 
                 int lSum = 0; int rSum=0;
