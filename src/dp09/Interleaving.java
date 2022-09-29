@@ -1,8 +1,6 @@
 package dp09;
 
 class Interleaving {
-
-
     public static void main(String[] args) {
         System.out.println(interleaving("bcc","bbca", "bbcbcac"));
         System.out.println(interleaving("yz","abcd", "abyczd"));
